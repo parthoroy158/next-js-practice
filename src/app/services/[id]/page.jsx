@@ -1,7 +1,7 @@
 import React from 'react';
 
 const page = ({ params }) => {
-    console.log(params.id)
+    console.log(params?.id)
     const data = [
         {
             "id": 1,
