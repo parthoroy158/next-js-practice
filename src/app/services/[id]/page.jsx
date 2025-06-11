@@ -1,7 +1,8 @@
 import React from 'react';
 
 const page = ({ params }) => {
-    console.log(params?.id)
+    console.log(params?.id);
+    const id = params?.id;
     const data = [
         {
             "id": 1,
@@ -50,17 +51,15 @@ const page = ({ params }) => {
         }
     ]
 
-    const singleData = data.find(item => item.id);
-
-
+    const singleData = data.find(item => item?.id == id);
     return (
         <div>
             <div className='flex gap-5 '>
-                <img className='rounded' src={singleData.fake_image_url} alt="" />
+                <img className='rounded' src={singleData?.fake_image_url} alt="" />
                 <div>
-                    <h1>{singleData.name}</h1>
-                    <h1>{singleData.details}</h1>
-                    <h1>{singleData.email}</h1>
+                    <h1>{singleData?.name}</h1>
+                    <h1>{singleData?.details}</h1>
+                    <h1>{singleData?.email}</h1>
                 </div>
 
             </div>
